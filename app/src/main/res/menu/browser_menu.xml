@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/action_new"
+        android:title="New Tab"
+        android:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_private"
+        android:title="New Private Tab"
+        android:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_tabs"
+        android:title="Tabs"
+        android:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_bookmarks"
+        android:title="Bookmarks"
+        android:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_history"
+        android:title="History"
+        android:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_downloads"
+        android:title="Downloads"
+        android:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_find"
+        android:title="Find in Page"
+        android:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_desktop"
+        android:title="Desktop Site"
+        android:checkable="true"
+        android:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_share"
+        android:title="Share Page"
+        android:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_clear"
+        android:title="Clear Browsing Data"
+        android:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_settings"
+        android:title="Settings"
+        android:showAsAction="never" />
+
+</menu>

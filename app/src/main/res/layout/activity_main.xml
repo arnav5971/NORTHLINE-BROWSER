@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/north_background">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="68dp"
+        android:paddingStart="20dp"
+        android:paddingEnd="12dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:background="@color/north_black">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/pageTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Your internet, your way"
+                android:textColor="@color/north_text"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:maxLines="1" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="NORTHLINE BROWSER"
+                android:textColor="@color/north_text_muted"
+                android:textSize="10sp"
+                android:letterSpacing="0.16" />
+        </LinearLayout>
+
+        <ImageButton
+            android:id="@+id/bookmarkButton"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="@android:color/transparent"
+            android:src="@android:drawable/btn_star_big_off"
+            android:tint="@color/north_text"
+            android:contentDescription="Bookmark" />
+
+        <ImageButton
+            android:id="@+id/menuButton"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="@android:color/transparent"
+            android:src="@android:drawable/ic_menu_more"
+            android:tint="@color/north_text"
+            android:contentDescription="Menu" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="16dp"
+        android:paddingTop="12dp"
+        android:paddingEnd="16dp"
+        android:paddingBottom="12dp"
+        android:background="@color/north_black"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:layout_width="32dp"
+            android:layout_height="48dp"
+            android:gravity="center"
+            android:text="⌕"
+            android:textSize="28sp"
+            android:textColor="@color/north_text_secondary" />
+
+        <EditText
+            android:id="@+id/address"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:singleLine="true"
+            android:hint="Search or type web address"
+            android:imeOptions="actionGo"
+            android:inputType="textUri"
+            android:textColor="@color/north_text"
+            android:textColorHint="@color/north_text_muted"
+            android:textSize="16sp"
+            android:paddingStart="14dp"
+            android:paddingEnd="12dp"
+            android:background="@drawable/address_background" />
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/progress"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:max="100"
+        android:visibility="gone"
+        android:indeterminate="false" />
+
+    <FrameLayout
+        android:id="@+id/tabContainer"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/swipeRefresh"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone" />
+
+        <ScrollView
+            android:id="@+id/homePanel"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true"
+            android:background="@color/north_background">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="18dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/greetingText"
+                    android:text="Welcome back!"
+                    android:textColor="@color/north_primary"
+                    android:textSize="17sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:id="@+id/homeHeadline"
+                    android:text="Your internet, your way."
+                    android:textColor="@color/north_text"
+                    android:textSize="27sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Search, explore and return to what matters."
+                    android:textColor="@color/north_text_secondary"
+                    android:textSize="15sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:id="@+id/openNorthlineCard"
+                        android:layout_width="0dp"
+                        android:layout_height="170dp"
+                        android:layout_weight="1"
+                        android:layout_marginEnd="7dp"
+                        android:padding="18dp"
+                        android:orientation="vertical"
+                        android:gravity="bottom"
+                        android:background="@drawable/home_card_primary">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="N" android:textSize="42sp" android:textStyle="bold" android:textColor="@color/north_text" />
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="6dp" android:text="Northline" android:textSize="20sp" android:textStyle="bold" android:textColor="@color/north_text" />
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="3dp" android:text="Explore your world" android:textSize="13sp" android:textColor="@color/north_text_secondary" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/searchCard"
+                        android:layout_width="0dp"
+                        android:layout_height="170dp"
+                        android:layout_weight="1"
+                        android:layout_marginStart="7dp"
+                        android:padding="18dp"
+                        android:orientation="vertical"
+                        android:gravity="bottom"
+                        android:background="@drawable/home_card">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="⌕" android:textSize="42sp" android:textColor="@color/north_primary" />
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="6dp" android:text="Search" android:textSize="20sp" android:textStyle="bold" android:textColor="@color/north_text" />
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="3dp" android:text="Find anything" android:textSize="13sp" android:textColor="@color/north_text_secondary" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/customizeHomeButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="52dp"
+                    android:layout_marginTop="22dp"
+                    android:text="✦  Customize Start Page"
+                    android:textAllCaps="false"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/north_text"
+                    android:background="@drawable/home_card" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="28dp"
+                    android:text="QUICK ACCESS"
+                    android:textColor="@color/north_text_muted"
+                    android:textSize="12sp"
+                    android:letterSpacing="0.12" />
+
+                <GridLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:id="@+id/quickGrid"
+                    android:columnCount="2">
+                    <TextView android:id="@+id/googleQuick" android:layout_width="0dp" android:layout_height="60dp" android:layout_columnWeight="1" android:layout_margin="5dp" android:gravity="center" android:text="G   Google" android:textColor="@color/north_text" android:textSize="16sp" android:background="@drawable/home_card" />
+                    <TextView android:id="@+id/youtubeQuick" android:layout_width="0dp" android:layout_height="60dp" android:layout_columnWeight="1" android:layout_margin="5dp" android:gravity="center" android:text="▶   YouTube" android:textColor="@color/north_text" android:textSize="16sp" android:background="@drawable/home_card" />
+                    <TextView android:id="@+id/githubQuick" android:layout_width="0dp" android:layout_height="60dp" android:layout_columnWeight="1" android:layout_margin="5dp" android:gravity="center" android:text="◉   GitHub" android:textColor="@color/north_text" android:textSize="16sp" android:background="@drawable/home_card" />
+                    <TextView android:id="@+id/northlineQuick" android:layout_width="0dp" android:layout_height="60dp" android:layout_columnWeight="1" android:layout_margin="5dp" android:gravity="center" android:text="N   Northline" android:textColor="@color/north_text" android:textSize="16sp" android:background="@drawable/home_card" />
+                    <TextView android:id="@+id/addQuick" android:layout_width="0dp" android:layout_height="60dp" android:layout_columnWeight="1" android:layout_margin="5dp" android:gravity="center" android:text="＋   Add shortcut" android:textColor="@color/north_primary" android:textSize="15sp" android:background="@drawable/home_card" />
+                </GridLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="28dp"
+                    android:gravity="center_vertical">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="RECENTLY VISITED"
+                        android:textColor="@color/north_text_muted"
+                        android:textSize="12sp"
+                        android:letterSpacing="0.12" />
+                    <TextView
+                        android:id="@+id/historyLink"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="View all"
+                        android:textColor="@color/north_primary"
+                        android:textSize="13sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/recentContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="vertical" />
+
+            </LinearLayout>
+        </ScrollView>
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="72dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:background="@color/north_black"
+        android:elevation="10dp">
+        <ImageButton android:id="@+id/back" android:layout_width="0dp" android:layout_weight="1" android:layout_height="match_parent" android:background="@android:color/transparent" android:src="@android:drawable/ic_media_previous" android:tint="@color/north_text" android:contentDescription="Back"/>
+        <ImageButton android:id="@+id/forward" android:layout_width="0dp" android:layout_weight="1" android:layout_height="match_parent" android:background="@android:color/transparent" android:src="@android:drawable/ic_media_next" android:tint="@color/north_text" android:contentDescription="Forward"/>
+        <ImageButton android:id="@+id/home" android:layout_width="0dp" android:layout_weight="1" android:layout_height="match_parent" android:background="@android:color/transparent" android:src="@android:drawable/ic_menu_view" android:tint="@color/north_primary" android:contentDescription="Home"/>
+        <ImageButton android:id="@+id/reload" android:layout_width="0dp" android:layout_weight="1" android:layout_height="match_parent" android:background="@android:color/transparent" android:src="@android:drawable/ic_popup_sync" android:tint="@color/north_text" android:contentDescription="Reload"/>
+        <FrameLayout android:id="@+id/tabs" android:layout_width="0dp" android:layout_weight="1" android:layout_height="match_parent">
+            <ImageButton android:layout_width="match_parent" android:layout_height="match_parent" android:background="@android:color/transparent" android:src="@android:drawable/ic_menu_recent_history" android:tint="@color/north_text" android:contentDescription="Tabs"/>
+            <TextView android:id="@+id/tabBadge" android:layout_width="20dp" android:layout_height="20dp" android:layout_gravity="center" android:gravity="center" android:text="1" android:textSize="10sp" android:textStyle="bold" android:textColor="@color/north_text" android:background="@drawable/address_background" />
+        </FrameLayout>
+    </LinearLayout>
+</LinearLayout>

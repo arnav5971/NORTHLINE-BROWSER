@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Theme.NorthBrowser"
+        parent="Theme.Material3.DayNight.NoActionBar">
+
+        <item name="android:fontFamily">sans</item>
+
+        <!-- Window -->
+        <item name="android:windowBackground">@color/north_background</item>
+        <item name="android:colorBackground">@color/north_background</item>
+
+        <!-- Status Bar -->
+        <item name="android:statusBarColor">@color/north_black</item>
+        <item name="android:windowLightStatusBar">false</item>
+
+        <!-- Navigation Bar -->
+        <item name="android:navigationBarColor">@color/north_black</item>
+        <item name="android:windowLightNavigationBar">false</item>
+
+        <!-- Brand -->
+        <item name="colorPrimary">@color/north_primary</item>
+        <item name="colorOnPrimary">@color/north_text</item>
+
+        <item name="colorSecondary">@color/north_primary</item>
+        <item name="colorSurface">@color/north_surface</item>
+        <item name="colorOnSurface">@color/north_text</item>
+
+    </style>
+
+</resources>

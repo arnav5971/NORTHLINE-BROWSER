@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Northline Brand -->
+    <color name="north_primary">#E53935</color>
+    <color name="north_primary_dark">#B71C1C</color>
+    <color name="north_primary_soft">#33E53935</color>
+
+    <!-- Premium Dark Surfaces -->
+    <color name="north_black">#08090C</color>
+    <color name="north_background">#0B0C10</color>
+    <color name="north_surface">#12141A</color>
+    <color name="north_surface_dark">#0E1015</color>
+    <color name="north_card">#171A21</color>
+    <color name="north_card_light">#20232C</color>
+
+    <!-- Address / Input -->
+    <color name="north_address">#1A1D25</color>
+    <color name="north_address_stroke">#30343D</color>
+
+    <!-- Text -->
+    <color name="north_text">#F5F5F7</color>
+    <color name="north_text_secondary">#A7ABB5</color>
+    <color name="north_text_muted">#747984</color>
+
+    <!-- Lines / States -->
+    <color name="north_divider">#252932</color>
+    <color name="north_success">#3DDC84</color>
+
+    <!-- Transparent -->
+    <color name="transparent">#00000000</color>
+
+</resources>

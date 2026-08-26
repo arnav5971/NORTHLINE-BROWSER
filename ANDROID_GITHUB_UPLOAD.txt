@@ -1,0 +1,44 @@
+NORTH BROWSER — ANDROID GITHUB UPLOAD
+
+This ZIP is already arranged as a Git repository ROOT.
+
+IMPORTANT:
+Do NOT open this ZIP and upload the individual files to github.com/upload.
+That destroys the folder structure.
+
+EASIEST ANDROID METHOD: TERMUX
+
+1. Install Termux from F-Droid.
+2. Open Termux and run:
+
+pkg update && pkg install git unzip -y
+termux-setup-storage
+
+3. Put this ZIP in your phone's Download folder, then run:
+
+cd /storage/emulated/0/Download
+rm -rf NorthBrowser-GitHub-Ready
+unzip NorthBrowser-GitHub-Ready.zip -d NorthBrowser-GitHub-Ready
+cd NorthBrowser-GitHub-Ready
+
+git init
+git add .
+git commit -m "Initial professional North Browser"
+git branch -M main
+git remote add origin https://github.com/YOUR-USERNAME/YOUR-REPOSITORY.git
+git push -u origin main
+
+Replace YOUR-USERNAME and YOUR-REPOSITORY with your own GitHub details.
+
+When GitHub asks for authentication, use a GitHub Personal Access Token instead of your password if required.
+
+After push:
+GitHub repository root should directly contain:
+.github/
+app/
+build.gradle.kts
+settings.gradle.kts
+gradle.properties
+README.md
+
+Then open GitHub > Actions > Build North Browser APK > Run workflow.
