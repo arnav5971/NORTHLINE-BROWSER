@@ -1,5 +1,3 @@
-SettingsActivity.kt
-
 package com.northline.browser
 
 import android.os.Bundle
